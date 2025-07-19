@@ -57,7 +57,7 @@ export default function RootLayout({
             <Socials />
           </div>
         </header>
-        <div className="py-8 px-4">{children}</div>
+        <div className="container mx-auto py-8 px-4">{children}</div>
       </body>
     </html>
   );
