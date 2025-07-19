@@ -43,18 +43,18 @@ export default function RootLayout({
         <link href="/dist/styles.css" rel="stylesheet" />
       </Head>
       <body className="dark:bg-zinc-900 dark:text-zinc-100">
-        <header className="flex sticky top-0 bg-white/90 justify-between space-x-4 p-4 border-b border-b-gray-200 dark:border-b-gray-700 dark:bg-zinc-900/95">
-          <nav>
-            <ul className="flex space-x-2">
+        <header className="flex sticky top-0 bg-white/90 space-x-4 border-b border-b-gray-200 dark:border-b-gray-700 dark:bg-zinc-900/95">
+          <div className="flex container mx-auto justify-between p-4">
+            <nav className="flex space-x-2">
               <NavLink href="/">about</NavLink>
               <NavLink href="/publications">publications</NavLink>
               <NavLink href="/CamposEstrada_CV.pdf">cv</NavLink>
               <NavLink href="/CamposEstrada_thesis.pdf">thesis</NavLink>
-            </ul>
-          </nav>
-          <div className="flex items-center space-x-4">
-            <button onClick={toggleColorScheme}>{colorScheme}</button>
-            <Socials />
+            </nav>
+            <div className="flex items-center space-x-4">
+              <button onClick={toggleColorScheme}>{colorScheme}</button>
+              <Socials />
+            </div>
           </div>
         </header>
         <div className="container mx-auto py-8 px-4">{children}</div>
