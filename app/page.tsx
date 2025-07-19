@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import Publication from "./components/Publication";
 
 export default function Home() {
@@ -58,7 +59,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col gap-4">
         <h2>
-          <a href="/publications">selected publications</a>
+          <Link href="/publications">selected publications</Link>
         </h2>
         <div className="flex flex-col gap-4">
           <Publication
