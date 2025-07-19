@@ -6,28 +6,28 @@ export function Socials() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <OrcidIcon className="h-6 text-gray-500 hover:text-primary-400 cursor-pointer" />
+        <OrcidIcon className="h-6 text-gray-500 dark:text-gray-300 hover:text-primary-400 cursor-pointer" />
       </a>
       <a
         href="https://scholar.google.com/citations?user=vA4P-dAAAAAJ&hl"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <ScholarIcon className="h-6 text-gray-500 hover:text-primary-400 cursor-pointer" />
+        <ScholarIcon className="h-6 text-gray-500 dark:text-gray-300 hover:text-primary-400 cursor-pointer" />
       </a>
       <a
         href="https://bsky.app/profile/exobeatriz.bsky.social"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <BlueskyIcon className="h-6 text-gray-500 hover:text-primary-400 cursor-pointer" />
+        <BlueskyIcon className="h-6 text-gray-500 dark:text-gray-300 hover:text-primary-400 cursor-pointer" />
       </a>
       <a
         href="mailto:becampos@mpia.de"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <EmailIcon className="h-6 text-gray-500 hover:text-primary-400 cursor-pointer" />
+        <EmailIcon className="h-6 text-gray-500 dark:text-gray-300 hover:text-primary-400 cursor-pointer" />
       </a>
     </div>
   );

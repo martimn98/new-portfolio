@@ -43,7 +43,7 @@ export default function RootLayout({
         <link href="/dist/styles.css" rel="stylesheet" />
       </Head>
       <body className="dark:bg-zinc-900 dark:text-zinc-100">
-        <header className="flex justify-between space-x-4 p-4 border-b border-b-gray-200 dark:border-b-gray-700">
+        <header className="flex sticky top-0 bg-white/90 justify-between space-x-4 p-4 border-b border-b-gray-200 dark:border-b-gray-700 dark:bg-zinc-900/95">
           <nav>
             <ul className="flex space-x-2">
               <NavLink href="/">about</NavLink>

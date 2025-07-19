@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export function NavLink({
@@ -13,16 +14,16 @@ export function NavLink({
 
   return (
     <li>
-      <a
+      <Link
         href={href}
         className={`transition-colors ${
           isActive
             ? "text-primary-500 hover:text-primary-700"
-            : "text-gray-700 hover:text-primary-400"
+            : "text-gray-700 dark:text-gray-100 hover:text-primary-400"
         } `}
       >
         {children}
-      </a>
+      </Link>
     </li>
   );
 }
