@@ -4,13 +4,14 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import { NavLink } from "./components/NavLink";
 import { Socials } from "./components/Socials";
+import { ColorSwitch } from "./components/ColorSwitch";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [colorScheme, setColorScheme] = useState("light");
+  const [colorScheme, setColorScheme] = useState<"light" | "dark">("light");
 
   function toggleColorScheme() {
     setColorScheme((prevScheme) => {
@@ -21,7 +22,9 @@ export default function RootLayout({
   }
 
   useEffect(() => {
-    const savedScheme = localStorage.getItem("color-scheme");
+    const savedScheme = localStorage.getItem("color-scheme") as
+      | "light"
+      | "dark";
     if (savedScheme) {
       setColorScheme(savedScheme);
     } else {
@@ -44,16 +47,19 @@ export default function RootLayout({
       </Head>
       <body className="dark:bg-zinc-900 dark:text-zinc-100">
         <header className="flex sticky top-0 bg-white/90 space-x-4 border-b border-b-gray-200 dark:border-b-gray-700 dark:bg-zinc-900/95">
-          <div className="flex container mx-auto justify-between p-4">
+          <div className="flex container mx-auto justify-between items-center p-4">
             <nav className="flex space-x-2">
               <NavLink href="/">about</NavLink>
               <NavLink href="/publications">publications</NavLink>
               <NavLink href="/CamposEstrada_CV.pdf">cv</NavLink>
               <NavLink href="/CamposEstrada_thesis.pdf">thesis</NavLink>
             </nav>
-            <div className="flex items-center space-x-4">
-              <button onClick={toggleColorScheme}>{colorScheme}</button>
+            <div className="flex items-center gap-6">
               <Socials />
+              <ColorSwitch
+                currentColor={colorScheme}
+                toggle={toggleColorScheme}
+              />
             </div>
           </div>
         </header>
