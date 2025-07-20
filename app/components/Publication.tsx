@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Publication as PublicationProps } from "../data/publications";
+import { monthMap } from "../utils/utils";
 
 function splitOtherAuthors(otherAuthors?: string) {
   if (!otherAuthors) return [];
@@ -36,7 +37,7 @@ export default function Publication({
   const otherAuthorsList = splitOtherAuthors(otherAuthors);
   const authorsWithinLimit = countAuthorsWithinLimit(otherAuthorsList, 200);
 
-  const date = `${month} ${year}`;
+  const date = `${monthMap(month, true)} ${year}`;
 
   return (
     <div>

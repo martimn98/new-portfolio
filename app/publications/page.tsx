@@ -1,7 +1,6 @@
 "use client";
 import Publication from "../components/Publication";
 import { publications } from "../data/publications";
-import { monthMap } from "../utils/utils";
 
 export default function PublicationPage() {
   const sortedPublications = [...publications].sort((a, b) => {
@@ -25,16 +24,7 @@ export default function PublicationPage() {
               {sortedPublications
                 .filter((pub) => pub.year === year)
                 .map((pub, index) => (
-                  <Publication
-                    key={index}
-                    title={pub.title}
-                    author={pub.author}
-                    journal={pub.journal}
-                    date={`${monthMap(pub.month, true)} ${pub.year}`}
-                    otherAuthors={pub.otherAuthors}
-                    doi={pub.doi}
-                    ads={pub.ads}
-                  />
+                  <Publication key={index} {...pub} />
                 ))}
             </div>
             {index < publicationsYears.length - 1 && (
