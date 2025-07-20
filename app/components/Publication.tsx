@@ -1,16 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
-interface PublicationProps {
-  title: string;
-  author: string;
-  otherAuthors?: string;
-  date: string;
-  journal: string;
-  doi?: string;
-  ads?: string;
-}
+import { Publication as PublicationProps } from "../data/publications";
 
 function splitOtherAuthors(otherAuthors?: string) {
   if (!otherAuthors) return [];
@@ -34,7 +25,8 @@ export default function Publication({
   author,
   otherAuthors,
   title,
-  date,
+  month,
+  year,
   journal,
   doi,
   ads,
@@ -43,6 +35,8 @@ export default function Publication({
   const referenceAuthor = "Beatriz Campos Estrada";
   const otherAuthorsList = splitOtherAuthors(otherAuthors);
   const authorsWithinLimit = countAuthorsWithinLimit(otherAuthorsList, 200);
+
+  const date = `${month} ${year}`;
 
   return (
     <div>
