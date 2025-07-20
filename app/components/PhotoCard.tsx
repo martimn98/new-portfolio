@@ -3,7 +3,7 @@ import { Image } from "./Image";
 
 export function PhotoCard() {
   return (
-    <div className="flex-1/4 shrink-0 flex justify-between flex-wrap  w-full h-fit gap-4 bg-primary-50 p-4 rounded-sm border border-primary-200">
+    <div className="flex-1/4 shrink-0 flex justify-between flex-wrap w-full h-fit gap-4 bg-primary-50 dark:bg-primary-500/5 p-4 rounded-sm border border-primary-200 dark:border-primary-200/10">
       <Image
         alt="photo of Beatriz"
         src="/photo.jpg"

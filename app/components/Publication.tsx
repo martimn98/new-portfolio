@@ -69,7 +69,7 @@ export default function Publication({
           <>
             <span>{!showFullAuthors ? `, and ` : `, `}</span>
             <span
-              className="opacity-50 cursor-pointer underline underline-offset-3"
+              className="text-gray-500 dark:text-gray-300 cursor-pointer underline underline-offset-3 hover:text-gray-600 dark:hover:text-gray-200"
               onClick={() => setShowFullAuthors((prev) => !prev)}
             >
               {!showFullAuthors
