@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "./components/NavLink";
 import { Socials } from "./components/Socials";
 import { ColorSwitch } from "./components/ColorSwitch";
+import { Menu } from "./components/Menu";
 
 export default function RootLayout({
   children,
@@ -47,13 +48,14 @@ export default function RootLayout({
       </Head>
       <body className="dark:bg-zinc-900 dark:text-zinc-100">
         <header className="flex sticky top-0 bg-white/90 space-x-4 border-b border-b-gray-200 dark:border-b-gray-700 dark:bg-zinc-900/95">
-          <div className="flex container mx-auto justify-between items-center p-4">
-            <nav className="flex space-x-2">
+          <div className="flex container mx-auto justify-between items-center p-4 w-full">
+            <nav className="hidden sm:flex space-x-2">
               <NavLink href="/">about</NavLink>
               <NavLink href="/publications">publications</NavLink>
               <NavLink href="/CamposEstrada_CV.pdf">cv</NavLink>
               <NavLink href="/CamposEstrada_thesis.pdf">thesis</NavLink>
             </nav>
+            <Menu />
             <div className="flex items-center gap-6">
               <Socials />
               <ColorSwitch
