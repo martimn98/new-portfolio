@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { EmailIcon } from "./icons/EmailIcon";
+import { Image } from "./Image";
 
 export function PhotoCard() {
   return (
