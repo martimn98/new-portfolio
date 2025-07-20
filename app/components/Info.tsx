@@ -11,7 +11,7 @@ export function Info() {
         in Heidelberg, where I am part of the{" "}
         <a href="https://www2.mpia-hd.mpg.de/~molliere/group/">
           atmospheric modelling and retrievals group
-        </a>{" "}
+        </a>
         . I focus on <b>connecting theory to observations of exoplanets</b> via
         different modelling techniques.
       </h3>
